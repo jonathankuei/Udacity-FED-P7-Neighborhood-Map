@@ -6,7 +6,7 @@ A filter function and list was also implemented which utilizes Knockout's MVVM f
 
 ### Getting Started
 
-To use the Dog Park Locator, download the .zip files to your computer locally and run index.html inside your browser.
+To use the Dog Park Locator, download the .zip files to your computer locally and run `index.html` inside your browser.
 
 ### Contributing
 1. Fork it!
