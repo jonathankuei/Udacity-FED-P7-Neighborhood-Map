@@ -1,0 +1,121 @@
+html, body, #map-canvas {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 1.0;
+}
+
+h1  {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+p span {
+    font-size: 10px;
+}
+
+.list-item p {
+    font-size: 12px;
+    line-height: 1.0;
+}
+
+.search-container {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    width: 280px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.search-container input {
+    width: 280px;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #1DE9B6;
+    padding-left: 45px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -webkit-transition: background .55s ease;
+    -moz-transition: background .55s ease;
+    -ms-transition: background .55s ease;
+    -o-transition: background .55s ease;
+    transition: background .55s ease;
+}
+
+.search-container input::-webkit-input-placeholder {
+    color: #1DE9B6;
+}
+
+.search-container .icon {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    z-index: 1;
+    color: #1de9b6;
+}
+
+.search-container input:hover, .search-container input:focus, .search-container input:active {
+    outline: 1px #263238;
+    background: #4d5b69;
+}
+
+.list-container {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    width: 280px;
+    background: #2b303b;
+    border: none;
+    float: left;
+    color: #ffffff;
+    padding-left: 45px;
+}
+
+.list {
+    position: absolute;
+    left: 0px;
+    width: 305px;
+    background: #2b303b;
+    border: none;
+    float: left;
+    color: #ffffff;
+    list-style-type: none;
+    padding: 10px 0px 10px 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.list :hover {
+    color: #1de9b6;
+    -webkit-transition: .55s ease;
+    -moz-transition: .55s ease;
+    -ms-transition: .55s ease;
+    -o-transition: .55s ease;
+    transition: .55s ease;
+}
+
+.list-item {
+    height: 85px;
+}
