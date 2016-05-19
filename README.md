@@ -1,4 +1,4 @@
-## Project 6 - Website Performance Optimization
+## Project 7 - Neighborhood Map
 
 The goal of this project was to create a single page application that would display interactive points of interest on a neighborhood map utilizing the Google Maps API. 
 For my project, I created a Dog Park Locator detailing various popular dog runs located in New York City and incorporated the Foursquare API to showcase photographs taken by local park goers.
