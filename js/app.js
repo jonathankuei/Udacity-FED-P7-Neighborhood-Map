@@ -118,7 +118,7 @@ function getData() {
     var clientID = 'AEN5HKSFSGN4AK4G4A40F2UZDCSAZWF2OBTAAYFKQXBB3DWX';
     var clientSecret = 'F5RDMCOFLHWMTZB3QKFE4SOSYQXC5W3OQOEQ0K2C0ZZWCHTV';
     var fsVersion = '&v=20140806';
-    var fsM = '&m=foursquare'
+    var fsM = '&m=foursquare';
     var fsURL;
     var fsID;
     var imgPrefix = 'https://irs0.4sqi.net/img/general/200x200';
@@ -141,14 +141,14 @@ function getData() {
     })
 }
 
-function mapViewModel() {
+function MapViewModel() {
     var self = this;
 
     //Creates an observable array and passes dog run information
     self.allRuns = ko.observableArray([]);
     dogRuns.forEach(function(dogRun) {
         self.allRuns.push(dogRun);
-    })
+    });
 
     //Triggers a Google map marker when corresponding name is clicked on the list
     self.clickMarker = function (dogRun) {
@@ -159,7 +159,7 @@ function mapViewModel() {
                 setTimeout(function(){marker.setAnimation(null);}, 700);
             }
         })
-    }
+    };
 
     //Creates a new array of visible dog runs
     self.visibleRuns = ko.observableArray([]);
@@ -193,7 +193,7 @@ function mapViewModel() {
     }
 }
 
-ko.applyBindings(new mapViewModel());
+ko.applyBindings(new MapViewModel());
 getData();
 
 
