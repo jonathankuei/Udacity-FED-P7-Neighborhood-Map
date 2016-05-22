@@ -10,9 +10,9 @@ To use the Dog Park Locator, download the .zip files to your computer locally an
 
 ### Contributing
 1. Fork it!
-1. Create your feature branch: git checkout -b new-feature
-1. Commit your changes: git commit -am 'Add new feature'
-1. Push to the branch: git push origin new-feature
+1. Create your feature branch: `git checkout -b new-feature`
+1. Commit your changes: `git commit -am 'Add new feature'`
+1. Push to the branch: `git push origin new-feature`
 1. Submit a pull request
 
 ### Resources
