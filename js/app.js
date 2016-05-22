@@ -1,4 +1,3 @@
-var map;
 var markers = [];
 var dogRuns = [
     {
@@ -80,7 +79,7 @@ var dogRuns = [
 //Creates and initializes Google maps
 function mapInit() {
     var nyc = new google.maps.LatLng(40.712784, -74.005941);
-    map = new google.maps.Map(document.getElementById('map-canvas'), {
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
         center: nyc,
         zoom: 13,
         disableDefaultUI: true
@@ -111,6 +110,11 @@ function mapInit() {
             }
         })(marker, i));
     }
+}
+
+//Google Maps API error handling
+function googleError() {
+    alert('Google Maps API could not be loaded');
 }
 
 //Foursquare API and AJAX get request for user uploaded images
