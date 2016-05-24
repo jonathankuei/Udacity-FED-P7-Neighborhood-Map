@@ -1,7 +1,8 @@
-html, body, #map-canvas {
+html,
+body {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -9,12 +10,20 @@ html, body, #map-canvas {
     line-height: 1.0;
 }
 
+#map-canvas {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 h1  {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
 }
 
@@ -22,17 +31,19 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.6;
 }
 
 p span {
-    font-size: 10px;
+    font-size: 12px;
 }
+
+
 
 .list-item p {
     font-size: 12px;
@@ -43,13 +54,13 @@ p span {
     position: absolute;
     top: 25px;
     left: 10px;
-    width: 280px;
+    width: 250px;
     vertical-align: middle;
     white-space: nowrap;
 }
 
 .search-container input {
-    width: 280px;
+    width: 250px;
     height: 50px;
     background: #2b303b;
     border: none;
@@ -57,7 +68,6 @@ p span {
     float: left;
     color: #1DE9B6;
     padding-left: 45px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     -webkit-transition: background .55s ease;
     -moz-transition: background .55s ease;
     -ms-transition: background .55s ease;
@@ -81,27 +91,11 @@ p span {
     outline: 1px #263238;
     background: #4d5b69;
 }
-
-.toggle {
-    position: absolute;
-    top: 100px;
-    left: 10px;
-    width: 325px;
-    text-align: center;
-    font-size: 10px;
-    background: #2b303b;
-    border: none;
-    float: left;
-    color: #47ffb3;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
 .list-container {
     position: absolute;
-    top: 140px;
+    top: 80px;
     left: 10px;
-    width: 280px;
+    width: 250px;
     background: #2b303b;
     border: none;
     float: left;
@@ -112,14 +106,13 @@ p span {
 .list {
     position: absolute;
     left: 0px;
-    width: 305px;
+    width: 275px;
     background: #2b303b;
     border: none;
     float: left;
     color: #ffffff;
     list-style-type: none;
     padding: 10px 0px 10px 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     cursor: pointer;
 }
 
@@ -133,5 +126,45 @@ p span {
 }
 
 .list-item {
-    height: 85px;
+    height: 80px;
 }
+
+@media screen and (max-width: 768px) {
+    .icon {
+        padding-left: 5px;
+        color: #2b303b;
+    }
+
+    .slideout-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        width: 317px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        display: none;
+        background: #2b303b;
+    }
+
+    .slideout-panel {
+        position: relative;
+        z-index: 0;
+        will-change: transform;
+    }
+
+    .slideout-open,
+    .slideout-open body,
+    .slideout-open .slideout-panel {
+        overflow: hidden;
+    }
+
+    .slideout-open .slideout-menu {
+        display: block;
+    }
+}
+
+
+
