@@ -171,7 +171,7 @@ function MapViewModel() {
             self.visibleRuns.push(run);
         });
 
-    //Toggle function to hide or show list
+    /** Toggle function to hide or show list
     self.listStatus = ko.observable("Hide");
     self.showList = ko.observable(true);
     self.toggleList = function() {
@@ -183,7 +183,8 @@ function MapViewModel() {
             self.listStatus("Hide");
         }
     };
-
+    **/
+    
     //Data binds user search input with ViewModel as the user types
     self.searchTerm = ko.observable("");
 
