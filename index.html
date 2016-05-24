@@ -12,29 +12,43 @@
 <body>
     <div id="map-canvas"></div>
 
-    <div class="search-container">
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="text" placeholder="Filter..." data-bind="textInput: searchTerm, event: {keyup: filter}">
-    </div>
+    <nav id="menu">
+        <div id class="search-container">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input type="text" placeholder="Filter..." data-bind="textInput: searchTerm, event: {keyup: filter}">
+        </div>
+        <div class = "list-container">
+            <ul class = "list" data-bind="foreach: visibleRuns">
+                <li class = "list-item" data-bind="click: $parent.clickMarker">
+                    <h2 data-bind="text: name"></h2>
+                    <p data-bind="text: address"></p>
+                    <p data-bind="text: city"></p>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class = "toggle" data-bind = "click: toggleList">
-        <p data-bind="text: listStatus"></p>
-    </div>
+    <main id="panel">
+        <header>
+            <span class="toggle-button icon"><i class="fa fa-bars fa-3x"></i></span>
+        </header>
+    </main>
 
-    <div class = "list-container" data-bind = "visible: showList">
-        <ul class = "list" data-bind="foreach: visibleRuns">
-            <li class = "list-item" data-bind="click: $parent.clickMarker">
-                <h2 data-bind="text: name"></h2>
-                <p data-bind="text: address"></p>
-                <p data-bind="text: city"></p>
-            </li>
-        </ul>
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.12/slideout.min.js"></script>
+    <script>
+        var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+            'padding': 317,
+            'tolerance': 70
+        });
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            slideout.toggle();
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src='js/knockout.js'></script>
     <script src="js/app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmQnh9TFUqLbI9Awe3CynAT9p8GpxZwVA&callback=mapInit" onerror = "googleError()"></script>
-
 </body>
 </html>
