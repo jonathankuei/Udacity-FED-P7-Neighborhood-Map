@@ -11,12 +11,17 @@
 </head>
 <body>
     <div id="map-canvas"></div>
-        <div class="search-container">
-                <span class="icon"><i class="fa fa-search"></i></span>
-                <input type="text" placeholder="Filter..." data-bind="textInput: searchTerm, event: {keyup: filter}">
-        </div>
 
-    <div class = "list-container">
+    <div class="search-container">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <input type="text" placeholder="Filter..." data-bind="textInput: searchTerm, event: {keyup: filter}">
+    </div>
+
+    <div class = "toggle" data-bind = "click: toggleList">
+        <p data-bind="text: listStatus"></p>
+    </div>
+
+    <div class = "list-container" data-bind = "visible: showList">
         <ul class = "list" data-bind="foreach: visibleRuns">
             <li class = "list-item" data-bind="click: $parent.clickMarker">
                 <h2 data-bind="text: name"></h2>
