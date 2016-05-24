@@ -107,7 +107,7 @@ function mapInit() {
                 var src = '<p><span>Source: Foursquare</span></p>';
                 infowindow.setContent(infoName + infoAddress + infoImg + src);
                 infowindow.open(map, marker);
-            }
+            };
         })(marker, i));
     }
 }
@@ -141,8 +141,8 @@ function getData() {
             }
         }).fail(function(e){
             alert('Foursquare API could not be loaded');
-        })
-    })
+        });
+    });
 }
 
 function MapViewModel() {
@@ -162,7 +162,7 @@ function MapViewModel() {
                 marker.setAnimation(google.maps.Animation.BOUNCE);
                 setTimeout(function(){marker.setAnimation(null);}, 700);
             }
-        })
+        });
     };
 
     //Creates a new array of visible dog runs
@@ -171,11 +171,24 @@ function MapViewModel() {
             self.visibleRuns.push(run);
         });
 
+    //Toggle function to hide or show list
+    self.listStatus = ko.observable("Hide");
+    self.showList = ko.observable(true);
+    self.toggleList = function() {
+        if (self.showList() === true) {
+            self.showList(false);
+            self.listStatus("Show");
+        } else {
+            self.showList(true);
+            self.listStatus("Hide");
+        }
+    };
+
     //Data binds user search input with ViewModel as the user types
     self.searchTerm = ko.observable("");
 
     //Dynamically filters through the list of dog runs
-    self.filter = function () {
+    self.filter = function() {
         var searchTerm = self.searchTerm().toLowerCase();
         //Clears all dog run information and markers when user begins to filter
         self.visibleRuns.removeAll();
@@ -194,7 +207,7 @@ function MapViewModel() {
                 marker.setVisible(true);
             }
         });
-    }
+    };
 }
 
 ko.applyBindings(new MapViewModel());
