@@ -21,3 +21,4 @@ To use the Dog Park Locator, download the .zip files to your computer locally an
 1. [Foursquare API Documentation](https://developer.foursquare.com/start)
 1. [KnockoutJS Documentation](http://knockoutjs.com/documentation/introduction.html)
 1. [jQuery AJAX Documentation](http://api.jquery.com/jquery.ajax/)
+1. [Slideout.js](https://mango.github.io/slideout/)
