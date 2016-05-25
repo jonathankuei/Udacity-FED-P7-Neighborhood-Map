@@ -13,6 +13,7 @@
     <div id="map-canvas"></div>
 
     <nav id="menu">
+
         <div id class="search-container">
             <span class="icon"><i class="fa fa-search"></i></span>
             <input type="text" placeholder="Filter..." data-bind="textInput: searchTerm, event: {keyup: filter}">
@@ -39,7 +40,7 @@
         var slideout = new Slideout({
             'panel': document.getElementById('panel'),
             'menu': document.getElementById('menu'),
-            'padding': 317,
+            'padding': 280,
             'tolerance': 70
         });
         document.querySelector('.toggle-button').addEventListener('click', function() {
